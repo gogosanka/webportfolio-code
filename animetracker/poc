@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<head>
+<title>Anime Tracker 3</title>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+<style>
+body {
+ font-family: 'Bangers', cursive;
+  margin: 0 auto;
+  max-width: 600px;
+  background: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpoper.com%2Fimages%2F00%2F42%2F68%2F44%2Fsimple-1366x768_00426844.jpg&f=1");
+  color: white;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Bangers', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #ffff00;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #ffffff;
+  margin: 0px 0 70px 0;
+}
+h4 {
+  font-family: 'times new roman', serif;
+  text-align: center;
+  font-size: 15px;
+  color: #222222;
+  margin: 60px 0 0 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s, font-size .5s, color .5s;
+  -webkit-transition: height .5s, font-size .5s, color .5s;
+  -moz-transition: height .5s, font-size .5s, color .5s;
+}
+small {
+  font-family: 'times new roman', serif;
+  color: white;
+  opacity: 0;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+  -moz-transition: opacity .5s;
+}
+span {
+  transition: font-size .5s, color .5s;
+  -webkit-transition: font-size .5s, color .5s;
+  -moz-transition: font-size .5s, color .5s;
+}
+.show-description p {
+  height: 150px;
+  font-size: 25px;
+  color: yellow;
+}
+
+.show-description small {
+  opacity: 1;
+  color: white;
+  font-size: 18px;
+}
+.show-description span {
+  font-size: 25px;
+  color: yellow;
+}
+
+.first{
+  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2F1.bp.blogspot.com%2F-u4DYvnFCCUM%2FUIP6nRQaNzI%2FAAAAAAAALyc%2FTcZDDpsj4bs%2Fs1600%2FNaruto%2BShippuden%2BWallpapers%2B9.jpg&f=1");
+}
+.second{
+  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fimages4.fanpop.com%2Fimage%2Fphotos%2F16400000%2FDeath-Note-death-note-16487359-1280-980.jpg&f=1");
+}
+.dessert{
+  background-image: url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpoper.com%2Fimages%2F00%2F33%2F88%2F42%2Fcowboy-bebop_00338842.png&f=1");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Anime Tracker</h1>
+<h2>Tracking favorite animes across time</h2>
+
+<div class="first">
+  <p>Naruto <span class="price">1</span><br />
+  <small>Naruto is a ninja-in-training with an incorrigible knack for mischief. His wild antics amuse his teammates, but Naruto is completely serious about one thing: becoming hokage. </small></p>
+</div>
+
+<div class="second">
+  <p>Death Note <span class="price">2</span><br />
+  <small>The story follows Light Yagami, a high school student who discovers a supernatural notebook from a shinigami named Ryuk that grants its user the ability to kill anyone whose name and face they know. The series centers around Light's subsequent attempts to create and rule a world "cleansed of evil" as "God" using the notebook, and the efforts of a detective known as L to stop him.</small></p>
+</div>
+  
+<div class="dessert">
+  <p>Cowboy Bebop <span class="price">3</span><br />
+  <small>The twenty-six episodes of the series are set in the year 2071, and follow the lives of a bounty hunter crew traveling on the Bebop. Cowboy Bebop explores philosophical concepts including existentialism, existential ennui, and loneliness.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
+
